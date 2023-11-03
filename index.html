@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Making Complementary Color Palettes</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 50px;
+      }
+      h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 2rem;
+        height: 120px;
+        width: 120px;
+        padding: 30px;
+        letter-spacing: 3px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      h2{
+        text-align: center;
+        font-size: 50px;
+        font-family:cursive;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>A Color Palette <a href="https://youtu.be/4VGyXW2rA4w?si=C8-pDMq1_BuFumkb">(reference dcode)</a></h2>
+    <div class="container"></div>
+    <script src="./library/color-scheme/color-scheme.js"></script>
+    <script>
+      const scheme = new ColorScheme();
+
+      scheme.from_hex("698d2d").scheme("tetrade").variation("hard")
+
+    //   favorite hex colors:  009578, 6dcdb1, 252c6a, 7f89df, ff6d10, ffddc7, fa364a, ffb0c0, B0250E, D22621, 2B3B4B, FFFD9E, BFA838, 06222E, D9D6A3, 698D2D
+
+      const colors = scheme.colors();
+
+      showColors(colors);
+
+      function showColors(paletteColors) {
+        let container = document.querySelector(".container");
+
+        for (let color of paletteColors) {
+          container.innerHTML += `<h1>😎#${color}</h1>`;
+          let h1Els = document.querySelectorAll("h1");
+
+          for (let el of h1Els) {
+            el.style.backgroundColor += `#${color}`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
