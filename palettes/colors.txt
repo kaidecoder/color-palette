@@ -1,0 +1,2 @@
+You can use the following colors to generate your palettes:
+ #009578, #6dcdb1, #252c6a, #7f89df, #ff6d10, #ffddc7, #fa364a, #ffb0c0, #B0250E, #D22621, #2B3B4B, #FFFD9E, #BFA838, #06222E, #D9D6A3, #698D2D
